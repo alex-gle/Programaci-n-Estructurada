@@ -1,7 +1,22 @@
 print("Bienvenido a urgencias")
-temperatura = float(input("Ingrese la temperatura del paciente: "))
-spo2 = int(input("Ingrese la saturación del paciente: "))
-fc = int(input("Ingrese la frecuencia cardiaca del paciente: "))
+while True:
+    try:
+        temperatura = float(input("Ingrese la temperatura del paciente: "))
+        break
+    except:
+        print("Error, ingrese nuevamente la temperatura:")
+while True:
+    try:
+        spo2 = int(input("Ingrese la saturación del paciente: "))
+        break
+    except:
+        print("Error, ingrese nuevamente la saturación: ")
+while True:
+    try:
+        fc = int(input("Ingrese la frecuencia cardiaca del paciente: "))
+        break
+    except:
+        print("Error, ingrese nuevamente la frecuencia cardiaca")
 
 if spo2 < 90 or fc > 120:
     print("ROJO")
